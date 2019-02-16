@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2019-02-16T14:30:14.353-05:00
-  initializedAtString: 2019-02-16T14:30:14.353-05:00
+  lastUpdatedAtString: 2019-02-16T14:42:40.306-05:00
+  initializedAtString: 2019-02-16T14:42:40.306-05:00
   currentGitRemote:
     name: origin
     url: https://github.com/bposadas3/Escape-the-Syllabus.git

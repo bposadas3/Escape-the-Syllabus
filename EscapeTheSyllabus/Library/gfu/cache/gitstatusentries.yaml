@@ -13,6 +13,114 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2019-02-16T14:32:15.867-05:00
-  initializedAtString: 2019-02-16T14:30:14.808-05:00
-  entries: []
+  lastUpdatedAtString: 2019-02-16T14:42:42.592-05:00
+  initializedAtString: 2019-02-16T14:42:42.130-05:00
+  entries:
+  - path: EscapeTheSyllabus\Library\assetDatabase3
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\assetDatabase3
+    projectPath: Library\assetDatabase3
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: EscapeTheSyllabus\Library\EditorInstance.json
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Library\gfu\cache\gitstatusentries.yaml
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: EscapeTheSyllabus\Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: EscapeTheSyllabus\Library\gfu\cache\repoinfo.yaml
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: EscapeTheSyllabus\Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    projectPath: Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: EscapeTheSyllabus\Library\StateCache\Hierarchy\5af0cb-mainStage.json
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Library\StateCache\Hierarchy\5af0cb-mainStage.json
+    projectPath: Library\StateCache\Hierarchy\5af0cb-mainStage.json
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: EscapeTheSyllabus\ProjectSettings\QualitySettings.asset
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\ProjectSettings\QualitySettings.asset
+    projectPath: ProjectSettings\QualitySettings.asset
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\__Backupscenes\0.backup
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\__Backupscenes\0.backup
+    projectPath: Temp\__Backupscenes\0.backup
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityLockfile
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityLockfile
+    projectPath: Temp\UnityLockfile
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityTempFile-15a8cff079cad9b4bb3a14bec46cf066
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityTempFile-15a8cff079cad9b4bb3a14bec46cf066
+    projectPath: Temp\UnityTempFile-15a8cff079cad9b4bb3a14bec46cf066
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityTempFile-2f4ba40eb5a8a6b43858cb5c74500d9b
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityTempFile-2f4ba40eb5a8a6b43858cb5c74500d9b
+    projectPath: Temp\UnityTempFile-2f4ba40eb5a8a6b43858cb5c74500d9b
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityTempFile-588b26f3d6d67cc44a67e794131d6f55
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityTempFile-588b26f3d6d67cc44a67e794131d6f55
+    projectPath: Temp\UnityTempFile-588b26f3d6d67cc44a67e794131d6f55
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityTempFile-a5aa72d0b6ea524469d5c227e83823cd
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityTempFile-a5aa72d0b6ea524469d5c227e83823cd
+    projectPath: Temp\UnityTempFile-a5aa72d0b6ea524469d5c227e83823cd
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityTempFile-aca4da6857d2ce241a25182fcf0339d0
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityTempFile-aca4da6857d2ce241a25182fcf0339d0
+    projectPath: Temp\UnityTempFile-aca4da6857d2ce241a25182fcf0339d0
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityTempFile-c87307be568d12e42a8ce48517f83985
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityTempFile-c87307be568d12e42a8ce48517f83985
+    projectPath: Temp\UnityTempFile-c87307be568d12e42a8ce48517f83985
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: EscapeTheSyllabus\Temp\UnityTempFile-ce76d46e76780fe4297d307cf2472feb
+    fullPath: C:\Users\14bpo\OneDrive\Documents\GitHub\Escape-the-Syllabus\EscapeTheSyllabus\Temp\UnityTempFile-ce76d46e76780fe4297d307cf2472feb
+    projectPath: Temp\UnityTempFile-ce76d46e76780fe4297d307cf2472feb
+    originalPath: 
+    status: 1
+    staged: 0
