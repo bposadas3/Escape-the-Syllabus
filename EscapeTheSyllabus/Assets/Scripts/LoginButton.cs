@@ -12,6 +12,9 @@ public class LoginButton : MonoBehaviour
 	public Text errorMessage;
 	public GameObject homeScreen;
 
+	//Delete Later
+	public GameObject adminButton;
+
 	private string username;
 	private string password;
 
@@ -28,10 +31,15 @@ public class LoginButton : MonoBehaviour
 		username = usernameInput.text;
 		password = passwordInput.text;
 
-		if (username.Equals ("username") && password.Equals ("password")) {
+		if (username.Equals ("username") && password.Equals ("password") || username.Equals("admin") && password.Equals("admin")) {
+			if (username.Equals ("admin") && password.Equals ("admin")) {
+				adminButton.SetActive (true);
+			} else {
+				adminButton.SetActive (false);
+			}
 			loginScreen.SetActive (false);
 			homeScreen.SetActive (true);
-		} else if (password.Equals("")) {
+		} else if (password.Equals ("")) {
 			errorMessage.text = "Password cannot be left blank!";
 		} else {
 			//display error message
