@@ -5,5 +5,5 @@ public class adventurer : ScriptableObject {
 
 	public string adventurerName = "New Adventurer";
 	public Sprite icon = null;
-	public int health;
+	public int health = 0;
 }
