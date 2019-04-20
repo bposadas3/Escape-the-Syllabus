@@ -31,7 +31,7 @@ The desktop application uses the C++ and Visual Basic framework that can be down
 
 ## Deployment Guide - Teacher Portal (MAC/WINDOWS)
 
-The teacher portal is a Java application which can be deployed to any machine which has Java v7+. The application includes all necessary libraries as add-on bundles, so no other actions are necessary.
+The teacher portal is a Java application which can be deployed to any machine which has Java v7+. The application includes all necessary libraries as add-on bundles, so no other actions are necessary. The teacher portal is made using Java and all relevant files containing the source code can be found in the on github. The portal can be launched by clicking on the .jar file provided. If a developer is taking over this application, they can make changes by editing the .java files in the directory. It is recommended that an IDE such as IntelliJ is used to simplify the front end development and also help debugging if needed.
 
 ## Deployment Guide - Backend
 
