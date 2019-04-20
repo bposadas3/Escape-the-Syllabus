@@ -26,7 +26,8 @@
 
 ## Deployment Guide - Desktop Application (MAC/ WINDOWS)
 
-The desktop application uses the C++ and Visual Basic framework that can be downloaded here: (https://www.microsoft.com/en-us/download/details.aspx?id=9639).
+The desktop application uses the C++ and Visual Basic framework that can be downloaded [here](https://www.microsoft.com/en-us/download/details.aspx?id=9639). The application also uses the Unity Engine, and requires the Unity Editor. The project can be opened on any platform that the Unity Engine supports. All scripts are found in the “Scripts” folder within the project. The project can be opened merely by selecting the project folder in the Unity Editor. Unity uses its own UI editor, and typically uses Visual Studio for script editing, though the default IDE can be changed. All UI elements must be edited using the Unity Editor. Furthur documentation on using the Unity Editor can be found [here](https://docs.unity3d.com/Manual/index.html).
+
 
 ## Deployment Guide - Teacher Portal (MAC/WINDOWS)
 
