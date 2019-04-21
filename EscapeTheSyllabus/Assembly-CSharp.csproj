@@ -77,34 +77,43 @@
     <Compile Include="Assets\RPG_BOX_Free\Scripts\ScriptablObjects\LootTable.cs" />
     <Compile Include="Assets\Scripts\adventurer.cs" />
     <Compile Include="Assets\Scripts\buttonNameChange.cs" />
-    <Compile Include="Assets\Scripts\FirebaseRealtimeDB.cs" />
+    <Compile Include="Assets\Scripts\GetQuestDescription.cs" />
     <Compile Include="Assets\Scripts\inventoryManager.cs" />
     <Compile Include="Assets\Scripts\item.cs" />
     <Compile Include="Assets\Scripts\LoginButton.cs" />
+    <Compile Include="Assets\Scripts\monster.cs" />
     <Compile Include="Assets\Scripts\OpenPDF.cs" />
+    <Compile Include="Assets\Scripts\PartyList.cs" />
     <Compile Include="Assets\Scripts\partyManager.cs" />
+    <Compile Include="Assets\Scripts\PartyPopulate.cs" />
     <Compile Include="Assets\Scripts\PopulateContent.cs" />
+    <Compile Include="Assets\Scripts\PopulateIems.cs" />
     <Compile Include="Assets\Scripts\quest.cs" />
     <Compile Include="Assets\Scripts\QuestList.cs" />
+    <Compile Include="Assets\Scripts\QuestWindow.cs" />
     <Compile Include="Assets\Scripts\Register.cs" />
-    <Compile Include="Assets\Scripts\Student.cs" />
+    <Compile Include="Assets\Scripts\RunQuest.cs" />
+    <Compile Include="Assets\Scripts\ShowItemDescription.cs" />
+    <Compile Include="Assets\Scripts\ShowItemName.cs" />
+    <Compile Include="Assets\Scripts\ShowParty.cs" />
     <Compile Include="Assets\Scripts\SyllabusButton.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\UserData.cs" />
+    <None Include="Assets\Aekashics Librarium - Megapack III\Terms of use.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -308,13 +317,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/14bpo/OneDrive/Documents/GitHub/EscapeTheSyllabus2/EscapeTheSyllabus/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

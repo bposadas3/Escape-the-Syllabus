@@ -5,23 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Quest", menuName = "Quest")]
 public class quest : ScriptableObject
 {
-	private string qname = "New Quest";
-	private string qdescription = "Description";
+	public new string name = "New Quest";
+	public string description = "Description";
+    public string qlink = "";
 
-
-	public void setName (string qn) {
-		qname = qn;
-	}
-
-	public void setDescription (string qdes) {
-		qdescription = qdes;
-	}
-
-	public string getName() {
-		return qname;
-	}
-
-	public string getDescription() {
-		return qdescription;
-	}
+    public void setAsActiveQuest()
+    {
+        UserData.instance.setActiveQuest(this);
+    }
 }
