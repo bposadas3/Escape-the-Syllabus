@@ -7,10 +7,15 @@ public class quest : ScriptableObject
 {
 	public new string name = "New Quest";
 	public string description = "Description";
-    public string qlink = "";
+    public string link = "https://docs.google.com/document/d/11Gtt2SEGp960EKXt_cWNGwCKAnpEkWkuhReJxcKphoM/edit?usp=sharing";
 
     public void setAsActiveQuest()
     {
         UserData.instance.setActiveQuest(this);
+    }
+
+    public void openQuestLink()
+    {
+        Application.OpenURL(link);
     }
 }

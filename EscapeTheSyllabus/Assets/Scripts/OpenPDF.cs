@@ -15,6 +15,6 @@ public class OpenPDF : MonoBehaviour
     // Update is called once per frame
     void Open()
     {
-        Application.OpenURL("https://docs.google.com/document/d/11Gtt2SEGp960EKXt_cWNGwCKAnpEkWkuhReJxcKphoM/edit?usp=sharing");
+        Application.OpenURL(UserData.instance.getActiveQuest().link);
     }
 }

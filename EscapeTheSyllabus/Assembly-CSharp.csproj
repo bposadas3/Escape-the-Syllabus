@@ -99,7 +99,6 @@
     <Compile Include="Assets\Scripts\SyllabusButton.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\UserData.cs" />
-    <None Include="Assets\Aekashics Librarium - Megapack III\Terms of use.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/14bpo/OneDrive/Documents/EscapeTheSyllabus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
