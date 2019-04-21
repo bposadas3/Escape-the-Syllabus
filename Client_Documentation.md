@@ -14,6 +14,10 @@
 - Users can submit assignments, view assignments, and view progress
 - Users can view the entire course syllabus
 - Users can redeem in-game rewards for items and quests
+- Backend to handle database requests to populate the game
+- Teachers can add students and make new assignments on the teacher console
+- Teachers can edit and view grades in the teacher console
+
 
 #### Outstanding Bugs
 
