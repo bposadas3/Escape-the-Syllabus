@@ -21,6 +21,7 @@ public class LoginButton : MonoBehaviour
     void Start()
     {
 
+        //RetrieveAssignments();
         loginButton.onClick.AddListener(Authenticate);
         errorMessage.text = "";
     }
@@ -30,6 +31,11 @@ public class LoginButton : MonoBehaviour
      **/
     void Authenticate()
     {        //ADD PROPER AUTHENTICATION PROCEDURE
+        foreach(Assignment a in FirebaseRealtimeDB.instance.assignments)
+        {
+            Debug.Log("Assignment name: " + a.assignment_name);
+        }
+
         username = usernameInput.text;
         password = passwordInput.text;
 
@@ -47,7 +53,7 @@ public class LoginButton : MonoBehaviour
     void RetrieveAssignments()
     {
         Debug.Log("Retrieve assignments");
-        StartCoroutine(Retrieve(2.0f, Finish));
+        StartCoroutine(Retrieve(5.0f, Finish));
     }
 
     IEnumerator Retrieve(float waitTime, Action finish)
@@ -62,13 +68,11 @@ public class LoginButton : MonoBehaviour
     {
         Debug.Log("Finish");
 
-        FirebaseRealtimeDB f = FirebaseRealtimeDB.instance;
-        Debug.Log(f.assignmentNames);
-            foreach (Assignment a in f.assignments)
+        Debug.Log(FirebaseRealtimeDB.instance.assignmentNames);
+            foreach (Assignment a in FirebaseRealtimeDB.instance.assignments)
         {
             Debug.Log(a.assignment_name);
         }
-
     }
 
     IEnumerator ReadFromDB(float waitTime, Action wrapUp)
@@ -84,8 +88,7 @@ public class LoginButton : MonoBehaviour
     {
 
         Debug.Log("Check firebase call: " + FirebaseRealtimeDB.instance.responseText);
-        FirebaseRealtimeDB f = FirebaseRealtimeDB.instance;
-        if (f.authCheck)
+        if (FirebaseRealtimeDB.instance.authCheck)
         {
             loginScreen.SetActive(false);
             homeScreen.SetActive(true);
@@ -108,7 +111,7 @@ public class LoginButton : MonoBehaviour
 
         if (passwordInput.isFocused && Input.GetKey(KeyCode.Return))
         {
-            //RetrieveAssignments();
+            //Debug.Log("Clicked: ");
             Authenticate();
         }
     }
