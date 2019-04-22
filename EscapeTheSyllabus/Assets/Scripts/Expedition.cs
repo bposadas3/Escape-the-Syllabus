@@ -135,7 +135,10 @@ public class Expedition : MonoBehaviour
             int itemIndex = rand.Next(0, UserData.instance.itemDatabase.Count);
             rewards.Add(UserData.instance.itemDatabase[itemIndex]);
         }
-
+        for (int i = 0; i < rewardsScreen.transform.childCount; i++)
+        {
+            Destroy(rewardsScreen.transform.GetChild(i).gameObject);
+        }
         foreach (item j in rewards)
         {
             GameObject inst = Instantiate(itemPrefab);

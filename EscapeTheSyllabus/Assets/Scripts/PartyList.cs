@@ -7,7 +7,12 @@ class AdventurerComparator : IComparer<adventurer>
 {
     public int Compare(adventurer x, adventurer y)
     {
-        return x.name.CompareTo(y.name);
+        if (!(x.power == y.power)) {
+            return y.power - x.power;
+        } else
+        {
+            return x.name.CompareTo(y.name);
+        }
     }
 }
 

@@ -39,11 +39,12 @@ public class UserData : MonoBehaviour
 			newQuest.description = ("description" + i.ToString ());
 			questList.Add (newQuest);
 		}
+        System.Random rand = new System.Random();
         for (int i = 0; i < 30; i++)
         {
             adventurer newAdventurer = adventurer.CreateInstance<adventurer>();
-            newAdventurer.name = i.ToString();
-            newAdventurer.power = 50;
+            newAdventurer.name = "Adventurer " + i.ToString();
+            newAdventurer.power = rand.Next(0, 60);
             guild.Add(newAdventurer);
         }
 
