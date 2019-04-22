@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +17,8 @@ public class Register : MonoBehaviour
 
     public GameObject loginScreen;
     public GameObject registerScreen;
+
+    private User user;
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +44,12 @@ public class Register : MonoBehaviour
         {
             if (passwordInput.text.Equals(confirmPasswordInput.text))
             {
-                errorMessage.text = "";
-                successMessage.text = "Successfully Registered!";
-                ClearInputs();
-                registerScreen.SetActive(false);
-                loginScreen.SetActive(true);
+
+                this.user = new User("email", firstNameInput.text, lastNameInput.text, 0, "", "", "", passwordInput.text, idInput.text, 1);
+
+                StartCoroutine(ReadFromDB(1.0f, WrapUp));
+
+
 
                 //Register user to database
             }
@@ -59,6 +62,24 @@ public class Register : MonoBehaviour
         {
             errorMessage.text = "All fields must be filled out.";
         }
+    }
+
+    IEnumerator ReadFromDB(float waitTime, Action wrapUp)
+    {
+        Debug.Log("In ReadFromDB");
+        IEnumerator e = FirebaseRealtimeDB.instance.registerUser(this.user);
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("leave ReadFromDB");
+        wrapUp();
+    }
+
+    void WrapUp()
+    {
+        errorMessage.text = "";
+        successMessage.text = "Successfully Registered!";
+        ClearInputs();
+        registerScreen.SetActive(false);
+        loginScreen.SetActive(true);
     }
 
     private void ClearInputs()
