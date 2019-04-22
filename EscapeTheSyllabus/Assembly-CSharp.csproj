@@ -77,6 +77,7 @@
     <Compile Include="Assets\RPG_BOX_Free\Scripts\ScriptablObjects\LootTable.cs" />
     <Compile Include="Assets\Scripts\adventurer.cs" />
     <Compile Include="Assets\Scripts\buttonNameChange.cs" />
+    <Compile Include="Assets\Scripts\Expedition.cs" />
     <Compile Include="Assets\Scripts\GetQuestDescription.cs" />
     <Compile Include="Assets\Scripts\inventoryManager.cs" />
     <Compile Include="Assets\Scripts\item.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Scripts\QuestWindow.cs" />
     <Compile Include="Assets\Scripts\Register.cs" />
     <Compile Include="Assets\Scripts\RunQuest.cs" />
+    <Compile Include="Assets\Scripts\ShowActiveItemIcon.cs" />
     <Compile Include="Assets\Scripts\ShowItemDescription.cs" />
     <Compile Include="Assets\Scripts\ShowItemName.cs" />
     <Compile Include="Assets\Scripts\ShowParty.cs" />

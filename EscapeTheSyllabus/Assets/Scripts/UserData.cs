@@ -17,6 +17,8 @@ public class UserData : MonoBehaviour
 
     public List<adventurer> guild;
 
+    public List<adventurer> adventurerDatabase;
+
 	public static UserData instance = null;
 	private quest activeQuest;
     private item activeItem;
@@ -41,14 +43,11 @@ public class UserData : MonoBehaviour
         {
             adventurer newAdventurer = adventurer.CreateInstance<adventurer>();
             newAdventurer.name = i.ToString();
-            newAdventurer.health = 100;
+            newAdventurer.power = 50;
             guild.Add(newAdventurer);
         }
 
-        for (int i = 0; i < itemDatabase.Count; i++)
-        {
-            inventory.Add(itemDatabase[i]);
-        }
+        inventory.Add(itemDatabase[0]);
 
 
         setActiveQuest(questList[0]);

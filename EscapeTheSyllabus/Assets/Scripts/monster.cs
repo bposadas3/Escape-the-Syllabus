@@ -6,6 +6,5 @@ using UnityEngine;
 public class monster : ScriptableObject
 {
     public new string name;
-    public new Sprite sprite;
-    public string power; //from 1 to 400
+    public int power; //from 1 to 400
 }
