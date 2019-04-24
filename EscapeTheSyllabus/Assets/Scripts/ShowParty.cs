@@ -25,9 +25,8 @@ public class ShowParty : MonoBehaviour
         }
         foreach (adventurer a in UserData.instance.party)
         {
-            Text newEntry = Instantiate(text);
+            Text newEntry = Instantiate(text, transform);
             newEntry.GetComponent<Text>().text = a.name + " Power: " + a.power;
-            newEntry.transform.SetParent(this.transform);
         }
     }
 }

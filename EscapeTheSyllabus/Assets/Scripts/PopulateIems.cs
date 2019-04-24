@@ -22,9 +22,8 @@ public class PopulateIems : MonoBehaviour
         UserData.instance.guild.Sort(comp);
         foreach (item i in UserData.instance.inventory)
         {
-            Button newEntry = Instantiate(button);
+            Button newEntry = Instantiate(button, transform);
             newEntry.GetComponent<Image>().sprite = i.icon;
-            newEntry.transform.SetParent(this.transform);
             newEntry.onClick.AddListener(i.SetAsActiveItem);
             newEntry.onClick.AddListener(Populate);
         }

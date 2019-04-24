@@ -21,9 +21,8 @@ public class PartyPopulate : MonoBehaviour
         }
         foreach (adventurer a in UserData.instance.party)
         {
-            Button newEntry = Instantiate(button);
+            Button newEntry = Instantiate(button, transform);
             newEntry.GetComponentInChildren<Text>().text = a.name + " Power:" + a.power;
-            newEntry.transform.SetParent(this.transform);
             newEntry.onClick.AddListener(a.RemoveFromParty);
             newEntry.onClick.AddListener(Populate);
             newEntry.onClick.AddListener(characterWindow.GetComponent<PartyList>().Populate);

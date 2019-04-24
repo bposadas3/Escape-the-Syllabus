@@ -15,6 +15,9 @@ public class ShowItemName : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = UserData.instance.getActiveItem().name;
+        if (UserData.instance.getActiveItem() != null)
+        {
+            text.text = UserData.instance.getActiveItem().name;
+        }
     }
 }

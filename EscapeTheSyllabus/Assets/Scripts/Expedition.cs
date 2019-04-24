@@ -31,8 +31,7 @@ public class Expedition : MonoBehaviour
     public void ContinueQuest()
     {
         buttonText.text = "Continue";
-        Text encounter = Instantiate(gameText);
-        encounter.transform.SetParent(this.transform);
+        Text encounter = Instantiate(gameText, transform);
         monster theMonster = GetRandomMonster();
         if (UserData.instance.party.Count > 0)
         {
@@ -44,8 +43,7 @@ public class Expedition : MonoBehaviour
             scrollbar.value = 0;
             return;
         }
-        Text resolution = Instantiate(gameText);
-        resolution.transform.SetParent(this.transform);
+        Text resolution = Instantiate(gameText, transform);
         if (Battle(theMonster))
         {
             if (successPoints < 2)
@@ -62,14 +60,12 @@ public class Expedition : MonoBehaviour
         } else
         {
             foreach (adventurer a in Lose()) {
-                Text deadMemo = Instantiate(gameText);
-                deadMemo.transform.SetParent(this.transform);
+                Text deadMemo = Instantiate(gameText, transform);
                 deadMemo.text = a.name + " was slain by the " + theMonster.name + ".";
             }
             if (UserData.instance.party.Count <= 0)
             {
-                Text loseMemo = Instantiate(gameText);
-                loseMemo.transform.SetParent(this.transform);
+                Text loseMemo = Instantiate(gameText, transform);
                 loseMemo.text = "Your party was defeated. Their treasures are lost.";
                 successPoints = 0;
                 continueButton.interactable = false;
@@ -141,10 +137,8 @@ public class Expedition : MonoBehaviour
         }
         foreach (item j in rewards)
         {
-            GameObject inst = Instantiate(itemPrefab);
+            GameObject inst = Instantiate(itemPrefab, rewardsScreen.transform);
             inst.GetComponent<Image>().sprite = j.icon;
-            inst.transform.SetParent(rewardsScreen.transform);
-
             if (!UserData.instance.inventory.Contains(j))
             {
                 UserData.instance.inventory.Add(j);

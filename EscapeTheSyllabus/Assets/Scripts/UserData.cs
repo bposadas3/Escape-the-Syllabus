@@ -32,13 +32,7 @@ public class UserData : MonoBehaviour
 			Destroy (gameObject);
 		}
 
-        //*********************DELETE LATER************************
-		for (int i = 0; i < 30; i++) {
-			quest newQuest = quest.CreateInstance<quest>();
-			newQuest.name = "quest" + i.ToString ();
-			newQuest.description = ("description" + i.ToString ());
-			questList.Add (newQuest);
-		}
+        //*********************DELETE LATER***********************
         System.Random rand = new System.Random();
         for (int i = 0; i < 30; i++)
         {
@@ -52,7 +46,6 @@ public class UserData : MonoBehaviour
 
 
         setActiveQuest(questList[0]);
-        setActiveItem(inventory[0]);
 
 		if (questList.Count != 0) {
 			activeQuest = questList [0];
@@ -108,4 +101,15 @@ public class UserData : MonoBehaviour
         Trickery
     }
 
+    public void GetAssignments()
+    {
+        foreach (Assignment i in FirebaseRealtimeDB.instance.assignments)
+        {
+            quest newQuest = quest.CreateInstance<quest>();
+            newQuest.name = i.assignment_name;
+            newQuest.description = i.description;
+            newQuest.link = i.link;
+            questList.Add(newQuest);
+        }
+    }
 }

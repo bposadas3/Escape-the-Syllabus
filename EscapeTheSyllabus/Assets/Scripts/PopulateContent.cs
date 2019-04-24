@@ -26,9 +26,18 @@ public class PopulateContent : MonoBehaviour
 		Populate ();
     }
 
-	void Populate() {
+    private void Update()
+    {
+        if (questList.Count == 0)
+        {
+            Populate();
+        }
+    }
+
+    void Populate() {
 		Button newButton;
-		if (questList.Count != 0) {
+        UserData.instance.GetAssignments();
+        if (questList.Count != 0) {
 			foreach (quest q in questList) {
 				newButton = Instantiate (buttonPrefab, transform);
 				newButton.name = q.name;
