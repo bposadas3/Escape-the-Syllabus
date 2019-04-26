@@ -1,17 +1,31 @@
 ﻿using System; using UnityEngine; using UnityEngine.Networking; using System.Collections;  
 public class FirebaseRealtimeDB : MonoBehaviour
-{     public static FirebaseRealtimeDB instance;     public ArrayList assignments = new ArrayList();     public String assignmentNames;     public bool authCheck = false;     public String responseText;       private void Start()     {          if (instance == null)
+{     public static FirebaseRealtimeDB instance;     public ArrayList assignments = new ArrayList();     public String assignmentNames;      public ArrayList users = new ArrayList();      public ArrayList items = new ArrayList();      public bool authCheck = false;     public String responseText;      public bool inGet = false;       private void Start()     {          if (instance == null)
         {             instance = this;         }
         else if (instance != this)
-        {             Destroy(gameObject);         }          //Debug.Log(instance);         GetAssignments();     }      public FirebaseRealtimeDB()
+        {             Destroy(gameObject);         }
+
+        //Debug.Log(instance);
+        GetAssignments();
+        GetUsers();                        }      public FirebaseRealtimeDB()
     {      }      public IEnumerator registerUser(User user)
     {         IEnumerator e;         String json = JsonUtility.ToJson(user);         Debug.Log("Student as JSON: " + json);
         StartCoroutine(e = RegistrationRequest("https://escape-the-syllabus-5b056.firebaseio.com/Students/" + user.userId + ".json", json));         return e;
     }      public IEnumerator GetAssignments()
-    {         StartCoroutine(austinGetAssinments());         //Debug.Log("Hello world");         //Debug.Log("GetAssignments()");         //StartCoroutine(getAssignmentNames());         //foreach (string assignmentName in assignmentNames.Split(','))
-        //{             //Debug.Log("AssignmentName: " + assignmentName);
-            //StartCoroutine(getAssignmentByName(assignmentName));
-        //}         //yield return new WaitForSeconds(1.0f);         //Debug.Log("After waiting: " + assignmentNames);            return null;     }      public IEnumerator austinGetAssinments()
+    {         AustinGetAssinments();         GetUsers();
+        //Debug.Log("Hello world");
+        //Debug.Log("GetAssignments()");
+        //StartCoroutine(getAssignmentNames());
+        //foreach (string assignmentName in assignmentNames.Split(','))
+        //{
+        //Debug.Log("AssignmentName: " + assignmentName);
+        //StartCoroutine(getAssignmentByName(assignmentName));
+        //}
+        //yield return new WaitForSeconds(1.0f);
+        //Debug.Log("After waiting: " + assignmentNames);
+
+
+        return null;     }      public IEnumerator AustinGetAssinments()
     {
 
         string uri = "https://escape-the-syllabus-5b056.firebaseio.com/Assignments" + ".json";
@@ -35,7 +49,7 @@ public class FirebaseRealtimeDB : MonoBehaviour
                         Assignment assignment = JsonUtility.FromJson<Assignment>(assignmentJSON);
                         assignments.Add(assignment);
 
-                        Debug.Log(assignment.assignment_name);
+                        //Debug.Log(assignment.assignment_name);
 
 
                         if (stripedString.Contains("{")) { 
@@ -50,7 +64,48 @@ public class FirebaseRealtimeDB : MonoBehaviour
                     }
                 }                 else                 {                     Debug.Log("The username is not recognized: " + uri);                  }             }         }
         
-    }      public IEnumerator getAssignmentByName(string name)
+    }      public IEnumerator GetUsers()
+    {
+
+        string uri = "https://escape-the-syllabus-5b056.firebaseio.com/Students" + ".json";
+
+        Debug.Log("hello world");
+
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))         {
+            // Request and wait for the desired page.
+            yield return webRequest.SendWebRequest();              string[] pages = uri.Split('/');             int page = pages.Length - 1;               if (webRequest.isNetworkError)             {                 Debug.Log(pages[page] + ": Error: " + webRequest.error);             }             else             {                 if (!webRequest.downloadHandler.text.Equals("null"))                 {
+                    String rawJSON = webRequest.downloadHandler.text;
+                    Assignment assignment1 = JsonUtility.FromJson<Assignment>(rawJSON);
+
+                    String stripedString = rawJSON.Substring(11, rawJSON.Length - 1 - 11);
+                    bool going = true;
+                    while (going)
+                    {
+                        String assignmentJSON = stripedString.Substring(0, stripedString.IndexOf("}") + 1);
+                        stripedString = stripedString.Substring(stripedString.IndexOf("}") + 1);
+
+                        //Debug.Log(assignmentJSON);
+                        User user = JsonUtility.FromJson<User>(assignmentJSON);
+                        users.Add(user);
+
+                        Debug.Log(user.lastName);
+
+
+                        if (stripedString.Contains("{"))
+                        {
+                            stripedString = stripedString.Substring(stripedString.IndexOf("{"));
+                        }
+                        else
+                        {
+                            going = false;
+                        }
+
+
+
+                    }
+                }                 else                 {                     Debug.Log("The username is not recognized: " + uri);                  }             }         }
+
+    }           public IEnumerator getAssignmentByName(string name)
     {         Debug.Log("Name: " + name);
         string uri = "https://escape-the-syllabus-5b056.firebaseio.com/Assignments/" + name + ".json";         using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))         {
             // Request and wait for the desired page.
