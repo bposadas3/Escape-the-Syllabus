@@ -36,9 +36,8 @@ public class PartyList : MonoBehaviour
         UserData.instance.guild.Sort(comp);
         foreach (adventurer a in UserData.instance.guild)
         {
-            Button newEntry = Instantiate(button);
+            Button newEntry = Instantiate(button, transform);
             newEntry.GetComponentInChildren<Text>().text = a.name + " Power:" + a.power;
-            newEntry.transform.SetParent(this.transform);
             newEntry.onClick.AddListener(a.AddToParty);
             newEntry.onClick.AddListener(Populate);
             newEntry.onClick.AddListener(partyList.GetComponent<PartyPopulate>().Populate);
